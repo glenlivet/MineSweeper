@@ -1,0 +1,34 @@
+@CHARSET "UTF-8";
+
+#wowslider-container1 .ws_images{
+	height: 0;
+	transition: height 2s;
+	-webkit-transition: height 2s; /* Safari */
+}
+
+#wowslider-container1:hover .ws_images{
+
+	height: 400px;
+}
+
+#wowslider-container1 #nice_tip{
+	background-color: #ffcccc;
+	height: 20px;
+	width: 100%;
+	color: #5555bb;
+	text-align: center;
+	position: absolute;
+	bottom: -139px;
+}
+
+@keyframes slider_hover
+{
+0% {height: 0;}
+100% {height: 400px;}
+}
+
+@-webkit-keyframes slider_hover /* Safari and Chrome */
+{
+0% {height: 0;}
+100% {height: 400px;}
+}

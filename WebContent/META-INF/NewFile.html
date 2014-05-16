@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+var whichButton = function (e) {
+    // Handle different event models
+    var e = e || window.event;
+    var btnCode;
+ 
+    if ('object' === typeof e) {
+        btnCode = e.button;
+ 
+        switch (btnCode) {
+            case 0:
+                alert('Left button clicked.');
+            break;
+            case 1:
+                alert('Middle button clicked.');
+            break;
+            case 2:
+                alert('Right button clicked.');
+            break;
+            default:
+                alert('Unexpected code: ' + btnCode);
+        }
+    }
+}
+</script>
+ 
+<button onmouseup="whichButton(event);" oncontextmenu="event.preventDefault();">Click with mouse...</button>
+
+</body>
+</html>
